@@ -1,6 +1,6 @@
 Small experiment with AWS Lambda.
 
-Lambda function accesses versioned JSON in S3, processes it with [json-balancer]() and returns.
+Lambda function accesses versioned JSON in S3, processes it with [json-balancer](https://www.npmjs.com/package/json-balancer) and returns.
 
 Objective: endpoint for configuration file, ready for AB tests.
 
