@@ -1,0 +1,32 @@
+{
+  "name": "config-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "babel src -d dist",
+    "start": "npm run transpile && node index.js",
+    "watch": "watch 'npm start' src/",
+    "test": "npm test",
+    "install-prod": "mv node_modules _n && npm install --production",
+    "create-bundle": "rm -rf bundle/ && mkdir bundle && cp dist/* bundle/ && cp -r node_modules/ bundle/",
+    "restore-modules": "rm -rf node_modules/ && mv _n node_modules",
+    "zip": "cd bundle && zip -r ../config-app.zip *",
+    "build": "npm run transpile && npm run install-prod && npm run create-bundle && npm run zip && npm run restore-modules",
+    "micro": "micro -p 3000 micro.js"
+  },
+  "author": "Lucas Reis <lucasmreis@gmail.com> (http://lucasmreis.github.io/blog/)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "babel-preset-stage-3": "^6.3.13",
+    "watch": "^0.17.1"
+  },
+  "dependencies": {
+    "json-balancer": "^0.5.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "allowSomething": true,
+  "apiVersion": "v3",
+  "summaryAB": {
+    "balance": [
+      {"percent": 50, "value": "none"},
+      {"percent": 25, "value": "right"},
+      {"percent": 25, "value": "bottom"}
+    ]
+  }
+}
